@@ -1,0 +1,14 @@
+/* Inclyo este css a pesar de que no es solicitado para darle un mejor formato a las imagenes svg */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer div a img {
+    height: 20px;
+}
+
+footer button img {
+    height: 20px;
+}
