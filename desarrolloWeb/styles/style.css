@@ -57,6 +57,14 @@ h2 {
     font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
+h3 {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    position: sticky;
+    top: 0;
+    left: 50%;
+    transform: translateX(50%);
+}
+
 .principal {
     color: #ff0062;
 }
@@ -71,5 +79,15 @@ p {
 }
 
 .copyright {
-    color: #ffafcc;
+    color: #a81717;
+}
+
+footer {
+    background-color: #afb7ff;
+    width: 50%;
+    height: 5000px;
+}
+
+footer h3 {
+    color: white;
 }
