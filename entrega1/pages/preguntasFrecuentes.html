@@ -13,10 +13,10 @@
     <header id="top">
         <h1>Estudiante Libre</h1>
         <nav>
-            <ul>
+            <ul class="navList">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./nosotros.html">Nosotros</a></li>
+                <li><a href="./nosotras.html">Nosotras</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
             </ul>
@@ -29,7 +29,7 @@
         <!-- Por lo que estuve investigando en internet esta parte no voy a poder implementarla igual que en el diseño propuesto hasta que sepamos usar javascript -->
         <!-- La idea es que las respuestas (<p>) solo se muestren cuando el usuario haga click en la pregunta correspondiente -->
         <!-- Para lograr eso deberia hacer que las preguntas (<h4>) sean botones, pero en este caso lo hago diferente para que la pagina en su estado actual tenga sentido y sea funcional -->
-        <section>
+        <section class="questions" id="questionEnvios">
             <h2>Envios</h2>
             <div>
                 <h4>1.Lorem ipsum dolor sit amet consectetur adipisicing elit?</h4>
@@ -48,7 +48,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis a enim minima dolor blanditiis amet eveniet, dicta illo cum reprehenderit, modi quisquam quos nihil delectus eius esse veritatis, quis quidem!</p>
             </div>
         </section>
-        <section>
+        <section class="questions" id="questionCompras">
             <h2>Compras</h2>
             <div>
                 <h4>1.Lorem ipsum dolor sit amet consectetur adipisicing elit?</h4>
@@ -67,7 +67,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis a enim minima dolor blanditiis amet eveniet, dicta illo cum reprehenderit, modi quisquam quos nihil delectus eius esse veritatis, quis quidem!</p>
             </div>
         </section>
-        <section>
+        <section class="questions" id="questionDevoluciones">
             <h2>Devoluciones</h2>
             <div>
                 <h4>1.Lorem ipsum dolor sit amet consectetur adipisicing elit?</h4>
@@ -89,30 +89,30 @@
     </main>
 
     <footer>
-        <ul>
+        <ul class="navList">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="./productos.html">Productos</a></li>
-            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./nosotras.html">Nosotras</a></li>
             <li><a href="./contacto.html">Contacto</a></li>
             <li><a href="./preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
         </ul>
 
         <form action="">
-            <label for="email">Suscribite a nuestras ofertas
+            <label for="email">
+                <p>Suscribite a nuestras ofertas</p>
                 <input type="emil" type="email" placeholder="Ingresa tu correo">
             </label>
             <button type="submit">Suscribir</button>
         </form>
 
         <div>
-            <a href="http://twitter.com" target="_blank"><img src="../media/twitter-brands.svg" alt="twitter-logo"></a>
-            <a href="http://facebook.com" target="_blank"><img src="../media/facebook-square-brands.svg" alt="facebook-logo"></a>
-            <a href="http://instagram.com" target="_blank"><img src="../media/instagram-brands.svg" alt="instagram-logo"></a>
-            <a href="http://youtube.com" target="_blank"><img src="../media/youtube-brands.svg" alt="youtube-logo"></a>
+            <a href="http://twitter.com" target="_blank"><img class="filterLight" src="../media/twitter-brands.svg" alt="twitter-logo"></a>
+            <a href="http://facebook.com" target="_blank"><img class="filterLight" src="../media/facebook-square-brands.svg" alt="facebook-logo"></a>
+            <a href="http://instagram.com" target="_blank"><img class="filterLight" src="../media/instagram-brands.svg" alt="instagram-logo"></a>
+            <a href="http://youtube.com" target="_blank"><img class="filterLight" src="../media/youtube-brands.svg" alt="youtube-logo"></a>
         </div>
 
-        <a href="#top"><button>Volver hacia arriba <img src="../media/arrow-up-solid.svg" alt="arrow-up-solid"></button></a>
-
+        <a href="#productos"><button>Volver hacia arriba <img class="filterDark" src="../media/arrow-up-solid.svg" alt="arrow-up-solid"></button></a>
     </footer>
 
 </body>
