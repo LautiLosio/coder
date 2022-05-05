@@ -85,9 +85,20 @@ p {
 footer {
     background-color: #afb7ff;
     width: 50%;
-    height: 5000px;
+    height: 50px;
 }
 
 footer h3 {
     color: white;
+}
+
+
+/* -------------- GRIDS ---------------- */
+
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem;
 }
