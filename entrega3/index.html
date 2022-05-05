@@ -12,18 +12,16 @@
 <body>
     <header id="inicio">
         <h1>Estudiante Libre</h1>
-        <nav>
-            <ul class="navList">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="./pages/productos.html">Productos</a></li>
-                <li><a href="./pages/nosotras.html">Nosotras</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-                <li><a href="./pages/preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-            </ul>
-        </nav>
+        <ul class="navList">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="./pages/productos.html">Productos</a></li>
+            <li><a href="./pages/nosotras.html">Nosotras</a></li>
+            <li><a href="./pages/contacto.html">Contacto</a></li>
+            <li><a href="./pages/preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+        </ul>
         <h2>Materiales y Apuntes</h2>
         <h3>De alumnos. Para alumnos</h3>
-        <a href="#popular"><button>Explorar</button></a>
+        <a class="button" href="#popular"><button>Explorar</button></a>
     </header>
 
     <main>
@@ -56,9 +54,7 @@
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iure dicta perspiciatis numquam alias hic deserunt, illo nostrum incidunt rem blanditiis neque, labore, fugiat possimus quisquam veniam accusantium temporibus maiores.</p>
             </div>
-            <figure>
-                <img src="./img/550X550.png" alt="imagenDeRelleno550x550">
-            </figure>
+            <img src="./img/550X550.png" alt="imagenDeRelleno550x550">
         </section>
 
         <section class="mediaShow" id="popular">
@@ -73,30 +69,33 @@
     </main>
 
     <footer>
-        <ul class="navList">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="./pages/productos.html">Productos</a></li>
-            <li><a href="./pages/nosotras.html">Nosotras</a></li>
-            <li><a href="./pages/contacto.html">Contacto</a></li>
-            <li><a href="./pages/preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
-        </ul>
+        <div class="footer">
 
-        <form action="">
-            <label for="email">
-                <p>Suscribite a nuestras ofertas</p>
-                <input type="email" type="email" placeholder="Ingresa tu correo">
-            </label>
-            <button type="submit">Suscribir</button>
-        </form>
+            <ul class="footNavList">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="./pages/productos.html">Productos</a></li>
+                <li><a href="./pages/nosotras.html">Nosotras</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="./pages/preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+            </ul>
 
-        <div>
-            <a href="http://twitter.com" target="_blank"><img class="filterLight" src="./media/twitter-brands.svg" alt="twitter-logo"></a>
-            <a href="http://facebook.com" target="_blank"><img class="filterLight" src="./media/facebook-square-brands.svg" alt="facebook-logo"></a>
-            <a href="http://instagram.com" target="_blank"><img class="filterLight" src="./media/instagram-brands.svg" alt="instagram-logo"></a>
-            <a href="http://youtube.com" target="_blank"><img class="filterLight" src="./media/youtube-brands.svg" alt="youtube-logo"></a>
+            <form class="subscription" action="">
+                <label for="email">
+                    <p>Suscribite a nuestras ofertas</p>
+                    <input type="email" type="email" placeholder="Ingresa tu correo">
+                </label>
+                <button type="submit">Suscribir</button>
+            </form>
+
+            <div class="contactIcons">
+                <a href="http://twitter.com" target="_blank"><img class="filterLight" src="./media/twitter-brands.svg" alt="twitter-logo"></a>
+                <a href="http://facebook.com" target="_blank"><img class="filterLight" src="./media/facebook-square-brands.svg" alt="facebook-logo"></a>
+                <a href="http://instagram.com" target="_blank"><img class="filterLight" src="./media/instagram-brands.svg" alt="instagram-logo"></a>
+                <a href="http://youtube.com" target="_blank"><img class="filterLight" src="./media/youtube-brands.svg" alt="youtube-logo"></a>
+            </div>
+
+            <a href="#inicio" class="button"><button>Volver hacia arriba <img class="filterDark" src="./media/arrow-up-solid.svg" alt="arrow-up-solid"></button></a>
         </div>
-
-        <a href="#inicio"><button>Volver hacia arriba <img class="filterDark" src="./media/arrow-up-solid.svg" alt="arrow-up-solid"></button></a>
     </footer>
 </body>
 

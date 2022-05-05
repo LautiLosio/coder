@@ -12,22 +12,31 @@ header {
     padding: 20px;
     text-align: center;
     color: #47525e;
-    padding: 20px 70px 100px 70px;
+    padding: 20px 0 70px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "h1 . nav nav" ". . . . " ". h2 h2 ." ". h3 h3 ." ". btn btn .";
 }
 
 nav {
-    margin-bottom: 20px;
+    grid-area: nav;
 }
 
-
-/* En la nav estoy usando inline-block a pesar de que no sea la mejor practica ya que mejora mucho la forma en la que se muestra el texto, para el resto de los elementos decidi evitar el uso de inline-block */
+.navList {
+    margin: 0 1rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: nav;
+}
 
 .navList li {
     list-style-type: none;
-    margin: 10px 0;
+    margin: 10px 10px;
 }
 
-nav ul li a {
+ul li a {
     text-decoration: none;
     color: #47525e;
     font-size: 1rem;
@@ -39,12 +48,17 @@ h1 {
     font-size: 1rem;
     font-weight: 500;
     color: #47525e;
+    grid-area: h1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h2 {
     font-size: 2.5rem;
     font-weight: 600;
     color: #47525e;
+    grid-area: h2;
 }
 
 h3 {
@@ -52,6 +66,7 @@ h3 {
     font-weight: 600;
     margin-bottom: 50px;
     color: #47525e;
+    grid-area: h3;
 }
 
 h4 {
@@ -86,6 +101,15 @@ button {
     cursor: pointer;
     border-radius: 10px;
 }
+
+.button {
+    grid-area: btn;
+}
+
+
+/* a{
+    grid-area: a;
+} */
 
 .buttonSecondary {
     background-color: #fff;
@@ -128,11 +152,16 @@ select {
 
 .threeImgSquare {
     background-color: #fff;
-    padding: 100px;
+    padding: 70px 0 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .threeImgSquare figure {
     width: 375px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .threeImgSquare figure figcaption {
@@ -142,11 +171,22 @@ select {
 
 .leftImage {
     background-color: #e5e9f2;
-    padding: 100px;
+    padding: 70px 0 70px 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". img" "titleParagraph img" ". img";
 }
 
 .titleParagraph {
     width: 430px;
+    grid-area: titleParagraph;
+}
+
+img {
+    grid-area: img;
 }
 
 .mediaShow {
@@ -298,10 +338,16 @@ select {
 
 footer {
     background-color: #47525e;
-    padding: 50px 70px 50px 70px;
+    padding: 50px 0;
 }
 
-footer ul li a {
+.footer {
+    /* display: grid; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.footNavList a {
     text-decoration: none;
     color: #e5e9f2;
     font-size: 1rem;
@@ -309,23 +355,46 @@ footer ul li a {
     line-height: 1.5rem;
 }
 
-footer button {
+.footer button {
     background-color: #e5e9f2;
     color: rgb(71, 82, 94);
     margin: 10px;
+    grid-area: btn;
 }
 
-footer div a img {
+.contactIcons a img {
     height: 20px;
     margin: 0 10px;
 }
 
-footer button img {
+.button img {
     height: 20px;
 }
 
-footer form label p {
+.subscription label p {
     color: #e5e9f2;
+}
+
+.footNavList {
+    margin: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    grid-area: footNav;
+}
+
+.footNavList li {
+    list-style-type: none;
+    margin: 10px 10px;
+}
+
+.subscription {
+    grid-area: subs;
+}
+
+.contactIcons {
+    grid-area: icons;
 }
 
 
