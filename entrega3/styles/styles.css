@@ -1,6 +1,7 @@
 /* Inclyo este css a pesar de que no es solicitado para darle un mejor formato a las imagenes svg */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -15,23 +16,21 @@ header {
     padding: 20px 0 70px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    align-items: center;
     grid-template-areas:
-    "h1 . nav nav"
-    ". . . . "
-    ". h2 h2 ."
-    ". h3 h3 ."
-    ". btn btn .";
-}
-
-nav {
-    grid-area: nav;
+        "h1 . nav nav"
+        ". . . . "
+        ". h2 h2 ."
+        ". h3 h3 ."
+        ". . . . "
+        ". btn btn .";
 }
 
 .navList {
     margin: 0 1rem 0 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     grid-area: nav;
 }
@@ -69,7 +68,6 @@ h2 {
 h3 {
     font-size: 1.75rem;
     font-weight: 600;
-    margin-bottom: 50px;
     color: #47525e;
     grid-area: h3;
 }
@@ -95,22 +93,27 @@ p {
     line-height: 1.5rem;
     margin: 10px 0;
     grid-area: p;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
     background-color: #47525e;
     border: none;
     color: #e5e9f2;
-    padding: 10px 50px;
+    padding: .7rem 2rem;
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
     margin: 10px;
     cursor: pointer;
     border-radius: 10px;
-    display: flex;
+    /* display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; */
 }
 
 .button {
@@ -118,11 +121,6 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-
-
-a {
-    text-decoration: none;
 }
 
 .buttonSecondary {
@@ -133,7 +131,7 @@ a {
 input {
     border: none;
     border-radius: 10px;
-    padding: 10px;
+    padding: .7rem 2rem;
     font-size: 1rem;
     font-weight: 400;
     margin: 10px 0;
@@ -167,9 +165,12 @@ select {
 
 .threeImgSquare {
     background-color: #fff;
-    padding: 70px 0 70px 0;
-    display: flex;
-    flex-wrap: wrap;
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+    grid-template-areas:
+        "img1 img2 img3";
     justify-content: center;
 }
 
@@ -181,7 +182,7 @@ select {
 
 .threeImgSquare figure figcaption {
     padding: 15px 0;
-    text-align: justify;
+    text-align: center;
 }
 
 .leftImage {
@@ -190,12 +191,11 @@ select {
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    gap: 2rem;
+    grid-template-columns: auto;
     grid-template-areas:
-    ". img"
-    "titleParagraph img"
-    "btn img";
+        "titleParagraph img";
 }
 
 .titleParagraph {
@@ -209,27 +209,34 @@ img {
 
 .mediaShow {
     background-color: #fff;
-    padding: 100px;
+    padding: 70px 0;
     text-align: center;
     display: grid;
-    grid-template-areas: 
-    ". h2 ."
-    ". p ."
-    ". imgGrid .";
+    grid-template-columns: auto;
+    justify-content: center;
+    justify-items: center;
+    grid-template-areas:
+        "h2"
+        "p"
+        "imgGrid";
 }
 
 .imageGrid {
     margin: 50px 0;
     grid-area: imgGrid;
-    display: grid;
     gap: 1rem;
+    display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-areas: 
-    "img1 img2"
-    "img1 img3"
-    "img5 img4"
-    "img6 img4";
+    align-items: stretch;
+    justify-items: stretch;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas:
+        "img1 img2"
+        "img1 img3"
+        "img5 img4"
+        "img6 img4";
     ;
 }
 
@@ -267,15 +274,6 @@ img {
     grid-area: img6;
     margin: 0;
     padding: 0;
-}
-
-.s550 {
-    height: 500px;
-}
-
-.s375 {
-    height: 250px;
-    width: 500px;
 }
 
 .searchHeader {
@@ -395,10 +393,6 @@ img {
     width: 80%;
 } */
 
-#inicio h3 {
-    margin-bottom: 50px;
-}
-
 #paginatorFirst {
     border-radius: 10px 0 0 10px;
 }
@@ -423,13 +417,13 @@ footer {
     background-color: #47525e;
     padding: 50px 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: 
-    "footNav subs btn"
-    "footNav icons btn";
+    gap: 5rem;
+    grid-template-columns: auto;
+    grid-template-areas:
+        "footNav subs btn";
     align-items: center;
     justify-items: center;
+    justify-content: center;
 }
 
 .footNavList a {
@@ -452,7 +446,6 @@ footer button {
 }
 
 .footNavList {
-    margin: 0 1rem 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -472,17 +465,19 @@ footer button {
     align-items: center;
 }
 
-.subscription p {
+.subscription form p {
     color: #e5e9f2;
+    text-align: center;
 }
 
-.subscription div {
+.subscription form div {
     display: flex;
 }
 
 .contactIcons {
     grid-area: icons;
     display: flex;
+    margin: 10px 0;
 }
 
 
