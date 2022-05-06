@@ -93,6 +93,8 @@ a {
     text-decoration: none;
 }
 
+
+
 button {
     background-color: #47525e;
     color: #e5e9f2;
@@ -208,6 +210,10 @@ select {
 
 img {
     grid-area: img;
+}
+
+.video {
+    grid-template-areas: vid;
 }
 
 .mediaShow {
@@ -353,8 +359,18 @@ img {
 }
 
 .videoShow {
-    padding: 100px;
+    padding: 70px 0;
     text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "h3"
+    "p"
+    "vid"
+    ;
 }
 
 .videoShow iframe {
@@ -379,21 +395,43 @@ img {
 
 .threeImgEllipse {
     background-color: #e5e9f2;
-    padding: 100px;
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    grid-template-areas:
+    "cande vale meli"
+    ;
+}
+
+#userCande {
+    grid-area: cande;
+}
+
+#userVale {
+    grid-area: vale;
+}
+
+#userMeli {
+    grid-area: meli;
 }
 
 .threeImgEllipse figure {
     width: 375px;
     text-align: center;
+    margin: 0 1rem;
 }
 
 .threeImgEllipse figure figcaption {
     padding: 15px 0;
 }
 
-.threeImgEllipse figure figcaption p {
+/* .threeImgEllipse figure figcaption p {
     text-align: justify;
-}
+} */
 
 .threeImgEllipse figure img {
     border-radius: 50%;
@@ -451,6 +489,16 @@ img {
         ". h3 h3 ."
         ". . . . "
         ". filter filter .";
+}
+
+#nosotras {
+    grid-template-areas: 
+    "h1 . nav nav"
+    ". . . ."
+    ". . . ."
+    ". h2 h2 ."
+    ". h3 h3 ."
+    ;
 }
 
 #paginatorFirst {
