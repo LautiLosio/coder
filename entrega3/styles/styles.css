@@ -18,13 +18,6 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     align-items: center;
-    grid-template-areas:
-        "h1 . nav nav"
-        ". . . . "
-        ". h2 h2 ."
-        ". h3 h3 ."
-        ". . . . "
-        ". btn btn .";
 }
 
 .navList {
@@ -102,8 +95,11 @@ a {
 
 button {
     background-color: #47525e;
-    border: none;
     color: #e5e9f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
     padding: .7rem 2rem;
     text-align: center;
     font-size: 1rem;
@@ -155,6 +151,13 @@ select {
     font-size: 1rem;
     font-weight: 500;
     margin: 10px;
+    width: 200px;
+}
+
+.productFilter {
+    display: flex;
+    justify-content: center;
+    grid-area: filter;
 }
 
 .searchBox {
@@ -221,9 +224,9 @@ img {
         "imgGrid";
 }
 
-.imageGrid {
-    margin: 50px 0;
+.imgGrid {
     grid-area: imgGrid;
+    margin: 50px 0;
     gap: 1rem;
     display: grid;
     align-items: center;
@@ -232,12 +235,30 @@ img {
     justify-items: stretch;
     justify-content: center;
     align-content: center;
+}
+
+#imgGridIndex {
     grid-template-areas:
         "img1 img2"
         "img1 img3"
         "img5 img4"
         "img6 img4";
     ;
+}
+
+#imgGridProduct {
+    gap: 2rem;
+    grid-template-areas:
+        "img1 img2 img3 img4"
+        "img5 img6 img7 img8"
+        "img9 img10 img11 img12"
+    ;
+}
+
+#imgGridProduct figure figcaption{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .img1 {
@@ -277,11 +298,27 @@ img {
 }
 
 .searchHeader {
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
+    grid-area: searchHeader;
+    display: grid;
+    grid-template-areas: "p srch";
+    align-items: center;
+    justify-content: space-between;
 }
 
 .productGrid {
-    padding: 100px;
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 1rem;
+    justify-content: center;
+    justify-items: stretch;
+    grid-template-areas:
+        "searchHeader"
+        "imgGrid"
+        "paginator"
+    ;
 }
 
 .imgGrid div figure {
@@ -294,7 +331,10 @@ img {
 }
 
 .paginator {
+    grid-area: paginator;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 .paginator button {
@@ -307,7 +347,7 @@ img {
     font-weight: 600;
     width: 36px;
     height: 36px;
-    margin: 1px;
+    margin: 0 5px;
     cursor: pointer;
     border-radius: 0;
 }
@@ -393,6 +433,26 @@ img {
     width: 80%;
 } */
 
+#inicio {
+    grid-template-areas:
+        "h1 . nav nav"
+        ". . . . "
+        ". h2 h2 ."
+        ". h3 h3 ."
+        ". . . . "
+        ". btn btn .";
+}
+
+#productos {
+    grid-template-areas:
+        "h1 . nav nav"
+        ". . . . "
+        ". h2 h2 ."
+        ". h3 h3 ."
+        ". . . . "
+        ". filter filter .";
+}
+
 #paginatorFirst {
     border-radius: 10px 0 0 10px;
 }
@@ -437,7 +497,6 @@ footer {
 footer button {
     background-color: #e5e9f2;
     color: rgb(71, 82, 94);
-    margin: 10px;
 }
 
 .contactIcons a img {
@@ -478,6 +537,11 @@ footer button {
     grid-area: icons;
     display: flex;
     margin: 10px 0;
+}
+
+.button button img{
+    height: 1rem;
+    margin: 0 0 0 10px;
 }
 
 
