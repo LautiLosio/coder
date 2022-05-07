@@ -12,15 +12,13 @@
 <body>
     <header id="contacto">
         <h1>Universify</h1>
-        <nav>
-            <ul class="navList">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./nosotras.html">Nosotras</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./preguntasFrecuentes.html">Preguntas&nbsp;Frecuentes</a></li>
-            </ul>
-        </nav>
+        <ul class="navList">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./nosotras.html">Nosotras</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="./preguntasFrecuentes.html">Preguntas&nbsp;Frecuentes</a></li>
+        </ul>
         <h2>Contacto</h2>
         <h3>¿Tenes alguna consulta? Hablanos</h3>
     </header>
@@ -32,67 +30,69 @@
                 <p>Ahi es donde podes encontrar mas informacion sobre envios y muchas cosas mas</p>
             </div>
             <a href="./preguntasFrecuentes.html" class="button"><button>Ir a Preguntas&nbsp;Frecuentes</button></a>
-            <figure>
-                <img src="../img/500X500.png" alt="imagenDeRelleno500x500">
-            </figure>
+            <img src="../img/500X500.png" alt="imagenDeRelleno500x500">
         </section>
 
         <section class="contactForm">
             <h3>Carga tus datos y dejanos tu mensaje</h3>
             <!-- Estoy usando los <p> para que despues sea mas simple darles el formato correcto en el css, creo que es la mejor forma de hacerlo...-->
-            <form action="">
-                <label for="nombre">
+            <form class="form" action="">
+                <label for="nombre" id="formName">
                     <p>Nombre y Apellido</p>
                     <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
                 </label><br>
-                <label for="email">
+                <label for="email" id="formEmail">
                     <p>Email</p>
                     <input type="email" id="email" placeholder="Ingresa tu email" required>
                 </label><br>
-                <label for="asunto">
+                <label for="asunto" id="formSubject">
                     <p>Asunto</p>
                     <input type="text" id="asunto" placeholder="¿Cual es tu consulta?" required>
                 </label><br>
-                <label for="telefono">
+                <label for="telefono" id="formPhone">
                     <p>Telefono</p>
                     <input type="tel" id="telefono" placeholder="+54 012-345-6789">
                 </label><br>
-                <label for="mensaje">
+                <label for="mensaje" id="formMessage">
                     <p>Mensaje</p>
-                    <textarea name="mensaje" id="mensaje" cols="50" rows="10" placeholder="Escribi tu mensaje" required></textarea>
+                    <textarea name="mensaje" id="mensaje" placeholder="Escribi tu mensaje" required></textarea>
                 </label><br>
                 <button type="reset" class="buttonSecondary">Borrar</button>
-                <button type="submit">Enviar</button>
+                <button type="submit" class="button">Enviar</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <ul class="navList">
+        <ul class="footNavList">
             <li><a href="../index.html">Inicio</a></li>
             <li><a href="./productos.html">Productos</a></li>
             <li><a href="./nosotras.html">Nosotras</a></li>
             <li><a href="./contacto.html">Contacto</a></li>
             <li><a href="./preguntasFrecuentes.html">Preguntas&nbsp;Frecuentes</a></li>
         </ul>
-
-        <form action="">
-            <label for="email">
+        <div class="subscription">
+            <form action="">
                 <p>Suscribite a nuestras ofertas</p>
-                <input type="emil" type="email" placeholder="Ingresa tu correo">
-            </label>
-            <button type="submit">Suscribir</button>
-        </form>
+                <div>
+                    <label for="email">
+                        <input type="emial" type="email" placeholder="Ingresa tu correo">
+                    </label>
+                    <button type="submit">Suscribir</button>
+                </div>
+            </form>
 
-        <div>
-            <a href="http://twitter.com" target="_blank"><img class="filterLight" src="../media/twitter-brands.svg" alt="twitter-logo"></a>
-            <a href="http://facebook.com" target="_blank"><img class="filterLight" src="../media/facebook-square-brands.svg" alt="facebook-logo"></a>
-            <a href="http://instagram.com" target="_blank"><img class="filterLight" src="../media/instagram-brands.svg" alt="instagram-logo"></a>
-            <a href="http://youtube.com" target="_blank"><img class="filterLight" src="../media/youtube-brands.svg" alt="youtube-logo"></a>
+            <div class="contactIcons">
+                <a href="http://twitter.com" target="_blank"><img class="filterLight" src="../media/twitter-brands.svg" alt="twitter-logo"></a>
+                <a href="http://facebook.com" target="_blank"><img class="filterLight" src="../media/facebook-square-brands.svg" alt="facebook-logo"></a>
+                <a href="http://instagram.com" target="_blank"><img class="filterLight" src="../media/instagram-brands.svg" alt="instagram-logo"></a>
+                <a href="http://youtube.com" target="_blank"><img class="filterLight" src="../media/youtube-brands.svg" alt="youtube-logo"></a>
+            </div>
         </div>
 
-        <a href="#productos"><button>Volver hacia arriba <img class="filterDark" src="../media/arrow-up-solid.svg" alt="arrow-up-solid"></button></a>
+        <a href="#contacto" class="button"><button>Volver&nbsp;hacia&nbsp;arriba<img class="filterDark" src="../media/arrow-up-solid.svg" alt="arrow-up-solid"></button></a>
     </footer>
+
 </body>
 
 </html>

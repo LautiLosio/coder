@@ -124,6 +124,7 @@ button {
 .buttonSecondary {
     background-color: #fff;
     color: #47525e;
+    grid-area: sbtn;
 }
 
 input {
@@ -133,6 +134,14 @@ input {
     font-size: 1rem;
     font-weight: 400;
     margin: 10px 0;
+}
+
+#mensaje {
+    width: 560px;
+    height: 160px;
+    max-width: 560px;
+    min-width: 560px;
+    min-height: 20px;
 }
 
 textarea {
@@ -166,6 +175,18 @@ select {
     background-color: #e5e9f2;
     color: #47525e;
     grid-area: srch;
+}
+
+.form {
+    grid-area: form;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    grid-template-areas: 
+    "formName formEmail"
+    "formSubject formPhone"
+    "formMessage formMessage"
+    "sbtn btn";
 }
 
 .threeImgSquare {
@@ -210,10 +231,6 @@ select {
 
 img {
     grid-area: img;
-}
-
-.video {
-    grid-template-areas: vid;
 }
 
 .mediaShow {
@@ -261,7 +278,7 @@ img {
     ;
 }
 
-#imgGridProduct figure figcaption{
+#imgGridProduct figure figcaption {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -367,17 +384,18 @@ img {
     justify-items: center;
     align-items: center;
     grid-template-areas:
-    "h3"
-    "p"
-    "vid"
+        "h3"
+        "p"
+        "vid"
     ;
 }
 
-.videoShow iframe {
+.video {
+    grid-area: vid;
     border-radius: 20px;
-    margin-top: 30px;
-    width: 80%;
-    height: 480px;
+    margin-top: 2rem;
+    width: 720px;
+    height: 405px;
     border: none;
 }
 
@@ -403,7 +421,7 @@ img {
     align-items: center;
     gap: 1rem;
     grid-template-areas:
-    "cande vale meli"
+        "cande vale meli"
     ;
 }
 
@@ -439,7 +457,17 @@ img {
 
 .contactForm {
     background-color: #e5e9f2;
-    padding: 100px;
+    padding: 70px 0;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    grid-template-areas:
+        "h3"
+        "form"
+    ;
 }
 
 .questions {
@@ -492,13 +520,24 @@ img {
 }
 
 #nosotras {
-    grid-template-areas: 
-    "h1 . nav nav"
-    ". . . ."
-    ". . . ."
-    ". h2 h2 ."
-    ". h3 h3 ."
+    grid-template-areas:
+        "h1 . nav nav"
+        ". . . ."
+        ". . . ."
+        ". h2 h2 ."
+        ". h3 h3 ."
+        ". . . ."
     ;
+}
+
+#contacto {
+    grid-template-areas:
+        "h1 . nav nav"
+        ". . . ."
+        ". . . ."
+        ". h2 h2 ."
+        ". h3 h3 ."
+        ". . . ."
 }
 
 #paginatorFirst {
@@ -511,6 +550,12 @@ img {
 
 #referFAQs {
     background-color: #fff;
+    grid-template-areas:
+        ". img"
+        "titleParagraph img"
+        "btn img"
+        ". img"
+    ;
 }
 
 #questionEnvios {
@@ -519,6 +564,26 @@ img {
 
 #questionDevoluciones {
     margin-bottom: 50px;
+}
+
+#formName {
+    grid-area: formName;
+}
+
+#formEmail {
+    grid-area: formEmail;
+}
+
+#formSubject {
+    grid-area: formSubject;
+}
+
+#formPhone {
+    grid-area: formPhone;
+}
+
+#formMessage {
+    grid-area: formMessage;
 }
 
 footer {
@@ -587,7 +652,7 @@ footer button {
     margin: 10px 0;
 }
 
-.button button img{
+.button button img {
     height: 1rem;
     margin: 0 0 0 10px;
 }
