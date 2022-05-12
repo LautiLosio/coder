@@ -31,6 +31,11 @@ header {
 .navList li {
     list-style-type: none;
     margin: 10px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.navList li:hover {
+    transform: translateY(-5px);
 }
 
 ul li a {
@@ -49,6 +54,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+}
+
+h1:active {
+    transform: rotate(360deg);
 }
 
 h2 {
@@ -111,9 +123,6 @@ button {
     margin: 10px;
     cursor: pointer;
     border-radius: 10px;
-    /* display: flex;
-    justify-content: space-evenly;
-    align-items: center; */
 }
 
 .button {
@@ -121,6 +130,15 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.button:active {
+    transform: scale(0.9);
 }
 
 .buttonSecondary {
@@ -206,6 +224,14 @@ select {
     width: 375px;
     margin-left: 1rem;
     margin-right: 1rem;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.threeImgSquare figure:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .threeImgSquare figure figcaption {
@@ -236,7 +262,10 @@ select {
 
 img {
     grid-area: img;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
 }
+
 
 .mediaShow {
     background-color: #fff;
@@ -247,8 +276,8 @@ img {
     justify-content: center;
     justify-items: center;
     grid-template-areas:
-        "titleParagraph"
-        "imgGrid";
+    "titleParagraph"
+    "imgGrid";
 }
 
 .imgGrid {
@@ -262,6 +291,10 @@ img {
     justify-items: stretch;
     justify-content: center;
     align-content: center;
+}
+
+.imgGrid img:hover {
+    transform: scale(1.03);
 }
 
 #imgGridIndex {
