@@ -1,5 +1,3 @@
-/* Inclyo este css a pesar de que no es solicitado para darle un mejor formato a las imagenes svg */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -8,7 +6,40 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-header {
+body {
+    background-color: #e5e9f2;
+}
+
+.navbar {
+    padding: 2%;
+}
+
+.bg-light {
+    color: #47525e;
+    background-color: #e5e9f2 !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #47525e !important;
+    margin: 0 1rem;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.active {
+    font-weight: 600;
+}
+
+.header {
     background-color: #e5e9f2;
     padding: 20px;
     text-align: center;
@@ -16,15 +47,15 @@ header {
     padding: 20px 0 70px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     align-items: center;
 }
 
 .navList {
     margin: 0 1rem 0 1rem;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     grid-area: nav;
 }
 
@@ -95,8 +126,6 @@ a {
     text-decoration: none;
 }
 
-
-
 button {
     background-color: #47525e;
     color: #e5e9f2;
@@ -111,9 +140,6 @@ button {
     margin: 10px;
     cursor: pointer;
     border-radius: 10px;
-    /* display: flex;
-    justify-content: space-evenly;
-    align-items: center; */
 }
 
 .button {
@@ -335,6 +361,7 @@ img {
 }
 
 .productGrid {
+    background-color: #fff;
     padding: 70px 0;
     display: grid;
     grid-template-columns: auto;
@@ -381,8 +408,8 @@ img {
 }
 
 .videoShow {
-    padding: 70px 0;
-    margin: 0 2rem;
+    background-color: #fff;
+    padding: 70px 10px;
     text-align: center;
     display: grid;
     grid-template-columns: auto;
@@ -406,7 +433,8 @@ img {
 }
 
 .mapEmbed {
-    padding: 100px;
+    background-color: #fff;
+    padding: 70px;
     text-align: center;
 }
 
@@ -479,17 +507,10 @@ img {
 .faqGrid {
     background-color: #fff;
     padding: 70px 0;
-    display: grid;
-    grid-template-columns: 1fr 6fr 1fr;
-    justify-content: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 3rem;
-    grid-template-areas:
-        ". envios ."
-        ". compras ."
-        ". devoluciones ."
-    ;
 }
 
 .faqGrid section {
@@ -497,17 +518,17 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-
+    width: 50%;
 }
 
 .question {
     display: flex;
     flex-direction: column;
-    max-width: 80%;
+    width: 100%;
 }
 
 .question h4 {
-    padding: 10px;
+    padding: 1rem;
     background-color: #e5e9f2;
     border-radius: 10px;
 }
@@ -515,14 +536,13 @@ img {
 .question p {
     /* margin: 10px;
     padding: 10px; */
-    text-align: justify;
+    text-align: left;
 }
 
 
 #inicio {
     grid-template-areas:
-        "h1 . nav nav"
-        ". . . . "
+        ". . . ."
         ". h2 h2 ."
         ". h3 h3 ."
         ". . . . "
@@ -531,7 +551,6 @@ img {
 
 #productos {
     grid-template-areas:
-        "h1 . nav nav"
         ". . . . "
         ". h2 h2 ."
         ". h3 h3 ."
@@ -541,8 +560,6 @@ img {
 
 #nosotras {
     grid-template-areas:
-        "h1 . nav nav"
-        ". . . ."
         ". . . ."
         ". h2 h2 ."
         ". h3 h3 ."
@@ -552,7 +569,6 @@ img {
 
 #contacto {
     grid-template-areas:
-        "h1 . nav nav"
         ". . . ."
         ". . . ."
         ". h2 h2 ."
@@ -562,7 +578,6 @@ img {
 
 #faqs {
     grid-template-areas:
-        "h1 . nav nav"
         ". . . ."
         ". . . ."
         ". h2 h2 ."
@@ -654,6 +669,8 @@ footer button {
 
 .footNavList {
     display: flex;
+    margin: 0;
+    padding: 0;
     flex-direction: column;
     justify-content: space-between;
     align-items: left;
@@ -692,9 +709,6 @@ footer button {
     margin: 0 0 0 10px;
 }
 
-
-/* Un poquito de magia para convertir los colores de los svg... */
-
 .filterDark {
     filter: invert(27%) sepia(2%) saturate(4986%) hue-rotate(172deg) brightness(91%) contrast(72%);
 }
@@ -703,19 +717,23 @@ footer button {
     filter: invert(96%) sepia(3%) saturate(2024%) hue-rotate(186deg) brightness(101%) contrast(90%);
 }
 
-
-/* Aca arranca el diseño responsive con uso de @media querys */
-
-
 @media only screen and (max-width: 1300px) {
 
+    .navbar {
+        position: sticky;
+        top: 10px;
+        margin: 2%;
+        padding: 1%;
+        border-radius: 10px;
+        background-color: #fff !important;
+        box-shadow: 0px 2px 5px 1px rgb(0 0 0 / 20%);
+    }
+
     #inicio {
-        grid-template-rows: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         grid-template-columns: auto;
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
-            "nav nav nav nav"
+            ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
             ". . . ."
@@ -724,9 +742,7 @@ footer button {
 
     #productos {
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
-            "nav nav nav nav"
+            ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
             ". . . ."
@@ -734,10 +750,8 @@ footer button {
     }
 
     #nosotras {
+        grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
-            "nav nav nav nav"
             ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
@@ -745,10 +759,8 @@ footer button {
     }
 
     #contacto {
+        grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
-            "nav nav nav nav"
             ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
@@ -756,14 +768,12 @@ footer button {
     }
 
     #faqs {
+        grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
-            "nav nav nav nav"
             ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
-            ". . . .";
+            ;
     }
 
     .navList {
@@ -778,15 +788,8 @@ footer button {
         padding: 70px 20px;
     }
 
-    /* .threeImgSquare{
-        grid-template-areas: 
-        "img1"
-        "img2"
-        "img3"
-        ;
-    } */
-
     .leftImage {
+
         grid-template-areas:
             "img"
             "titleParagraph"
@@ -830,6 +833,10 @@ footer button {
     .mapEmbed {
         padding: 70px 0;
     }
+    
+    .faqGrid section {
+        width: 80%;
+    }
 
     .question {
         max-width: 100%;
@@ -839,7 +846,7 @@ footer button {
         grid-template-areas:
             "img ."
             "titleParagraph btn"
-            ;
+        ;
     }
 
     #referFAQs img {
@@ -867,22 +874,17 @@ footer button {
         justify-content: center;
     }
 
-
-
-
-
 }
-
-/* Mobile */
 
 @media only screen and (max-width: 700px) {
 
+    .header {
+        grid-template-rows: repeat(4, 1fr);
+    }
+
     #inicio {
         /* padding-bottom: 10px; */
-        grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
             ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
@@ -890,10 +892,9 @@ footer button {
     }
 
     #productos {
-        grid-template-rows: repeat(6, 1fr);
+        padding-left: 1rem;
+        padding-right: 1rem;
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
             ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
@@ -901,10 +902,7 @@ footer button {
     }
 
     #nosotras {
-        grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
             ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
@@ -912,10 +910,7 @@ footer button {
     }
 
     #contacto {
-        grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
             ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
@@ -923,10 +918,7 @@ footer button {
     }
 
     #faqs {
-        grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
-            ". h1 h1 ."
-            "nav nav nav nav"
             ". . . ."
             "h2 h2 h2 h2"
             "h3 h3 h3 h3"
@@ -990,12 +982,16 @@ footer button {
         height: 200px;
     }
 
+    .faqGrid section {
+        width: 90%;
+    }
+
     #referFAQs {
         grid-template-areas:
             "img"
             "titleParagraph"
             "btn"
-            ;
+        ;
     }
 
     #referFAQs h3 {
@@ -1021,6 +1017,5 @@ footer button {
     .footNavList {
         justify-content: center;
     }
-
 
 }
