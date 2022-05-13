@@ -1,4 +1,4 @@
-# Desafio: `Maquetado con Bootstrap`
+## Desafio: `Maquetado con Bootstrap`
 
 ### >> Consigna 
 A partir del diseño hecho y los conocimientos adquiridos de bootstrap, generar el index y una página más a elección que demuestre el uso correcto del mismo. Después, cargar todo a github.
@@ -9,7 +9,7 @@ A partir del diseño hecho y los conocimientos adquiridos de bootstrap, generar 
 
 ---
 
-# Desafio complemetario: `Aplicando bootsrap`
+## Desafio complemetario: `Aplicando bootsrap`
 
 ### >> Consigna
 A partir del diseño hecho y los conocimientos adquiridos de bootstrap, generar todo el sitio (cinco paginas) que demuestre el uso correcto del mismo. Después, cargar todo a github. 
