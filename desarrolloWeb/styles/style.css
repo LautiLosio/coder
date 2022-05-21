@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Antes de hacer cualquier cosa hay que resetar los estilos CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+selector{ (puede ser una etiqueta, una clase o un id)  etiqueta < clase < id (el id tiene mayor prioridad que la clase y la etiqueta)
+    propiedad: valor; 
+}
+*/
+
+
+/* color palette 
+#cdb4db
+#ffc8dd
+#ffafcc
+#bde0fe
+#a2d2ff
+*/
+
+header {
+    background-color: #bde0fe;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    height: 60px;
+    line-height: 60px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 1rem;
+    font-size: xx-large;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+h2 {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+h3 {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    position: sticky;
+    top: 0;
+    left: 50%;
+    transform: translateX(50%);
+}
+
+.principal {
+    color: #ff0062;
+}
+
+#subtitulo {
+    color: rgb(2, 116, 182);
+}
+
+p {
+    color: black;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.copyright {
+    color: #a81717;
+}
+
+footer {
+    background-color: #afb7ff;
+    width: 50%;
+    height: 50px;
+}
+
+footer h3 {
+    color: white;
+}
+
+
+/* -------------- GRIDS ---------------- */
+
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem;
+}

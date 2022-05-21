@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../styles/style.css"> -->
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a> </li>
+                <li><a href="./usados.html">Usados</a> </li>
+                <li><a href="./nuevos.html">Nuevos</a> </li>
+                <li><a href="./contacto.html">Contacto</a> </li>
+                <li><a href="./soporte.html">Soporte y Envios</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <form action="">
+            <label for="nombre">Como te llamas? <br>
+                    <input type="text" id="nombre" name="nombre" placeholder="introduce tu nombre">
+                </label><br>
+
+            <label for="email">Introduce tu email <br>
+                    <input type="email" id="email" placeholder="introduce tu email" required name="email">
+                </label><br>
+
+            <label for="contraseña">Introduce tu contraseña <br>
+                    <input type="password" id="contraseña" placeholder="tiene que tener 8 caracteres como minimo">
+                </label><br>
+
+            <label for="inicio">Introduce tu fecha de nacimiento <br>
+                    <input type="date" id="inicio" placeholder="">
+                </label><br>
+
+            <label for="horario">Introduce tu horario de trabajo <br>
+                    <input type="time" id="horario" placeholder="">
+                </label><br>
+
+            <label for="mensaje">Introduce tu mensaje <br>
+                    <textarea name="mensaje" id="mensaje" cols="20" rows="1"></textarea>
+                </label><br>
+
+            <label for="acepta">Acepta los terminos y condiciones
+                    <input type="checkbox" id="acepta" placeholder="" required>
+                </label><br>
+
+            <p>Tipo de carrera</p>
+            <select name="oficio" id="">
+                    <option value="">Selecciona una opcion</option>
+                    <option value="">Diseñador</option>
+                    <option value="">Programador</option>
+                    <option value="">Administrador</option>
+            </select><br>
+
+            <input list="categorias">
+            <datalist id="categorias">
+                    <option value="Diseñador"></option>
+                    <option value="Programador"></option>
+                    <option value="Administrador"></option>
+            </datalist><br>
+
+            <div>
+                <p>Eleji una opcion</p>
+                <div> Izquierda
+                    <input type="radio" name="lado" value="izquier">
+                </div>
+
+                <div> Derecha
+                    <input type="radio" name="lado" value="derecha">
+                </div>
+            </div>
+
+            <input type="submit"> <input type="reset">
+
+        </form>
+    </main>
+</body>
+
+</html>
