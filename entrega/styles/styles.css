@@ -12,6 +12,11 @@ body {
 
 .navbar {
     padding: 2%;
+    z-index: 1;
+}
+
+.navbar-collapse img {
+    max-height: 40px;
 }
 
 .bg-light {
@@ -128,7 +133,7 @@ h5 {
 p {
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5rem;
+    line-height: 1.8rem;
     margin: 1rem;
     grid-area: p;
     text-align: left;
@@ -241,31 +246,36 @@ select {
 .threeImgSquare {
     background-color: #fff;
     padding: 70px 0;
-    display: grid;
-    grid-template-columns: auto;
-    gap: 1rem;
-    grid-template-areas:
-        "img1 img2 img3";
+    display: flex;
     justify-content: center;
+    align-items: baseline;
 }
 
 .threeImgSquare figure {
-    width: 375px;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    /* width: 375px; */
+    background-color: #fff;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     transition: all 0.2s ease-in-out;
     border-radius: 10px;
-    padding: 10px;
 }
 
 .threeImgSquare figure:hover {
     transform: scale(1.02);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 3px 8px 0px;
 }
 
 .threeImgSquare figure figcaption {
     padding: 15px 0;
+    max-width: 375px;
     text-align: center;
+}
+
+.threeImgSquare figure img {
+    margin: 1rem;
+    max-width: 375px;
 }
 
 .leftImage {
@@ -281,20 +291,23 @@ select {
         "titleParagraph img";
 }
 
+.leftImage img {
+    max-width: 500px;
+}
+
 .titleParagraph {
     width: 430px;
     grid-area: titleParagraph;
     display: flex;
     flex-direction: column;
     align-items: left;
+
 }
 
 img {
     grid-area: img;
     transition: all 0.2s ease-in-out;
-    overflow: hidden;
 }
-
 
 .mediaShow {
     background-color: #fff;
@@ -322,8 +335,22 @@ img {
     align-content: center;
 }
 
-.imgGrid img:hover {
-    transform: scale(1.03);
+.imgGrid figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: rgb(0 0 0 / 5%) 0px 1px 4px 1px;
+    transition: all 0.2s ease-in-out;
+}
+
+.imgGrid figure img{
+    max-width: 270px;
+    max-height: 270px;
+    border-radius: 10px;
 }
 
 #imgGridIndex {
@@ -344,10 +371,22 @@ img {
     ;
 }
 
+#imgGridProduct figure:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 15%) 0px 3px 8px 0px;
+}
+
 #imgGridProduct figure figcaption {
+    margin: 1rem;
+    max-width: 240px;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: left;
+}
+
+#imgGridProduct figure figcaption p {
+    margin: 10px 0;
 }
 
 .img1 {
@@ -484,15 +523,10 @@ img {
 .threeImgEllipse {
     background-color: #e5e9f2;
     padding: 70px 0;
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
     justify-content: center;
-    justify-items: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 1rem;
-    grid-template-areas:
-        "cande vale meli"
-    ;
 }
 
 #userCande {
@@ -762,7 +796,7 @@ footer button {
         padding: 1%;
         border-radius: 10px;
         background-color: #fff !important;
-        box-shadow: 0px 2px 5px 1px rgb(0 0 0 / 20%);
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 1px;
     }
 
     #inicio {
@@ -972,7 +1006,7 @@ footer button {
     }
 
     .threeImgSquare figure {
-        width: 290px;
+        width: auto;
     }
 
     .threeImgSquare figure img {
