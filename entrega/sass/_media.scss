@@ -1,0 +1,192 @@
+$tablet:1300px;
+$phone:700px;
+
+@media only screen and (max-width: $tablet) {
+	.navbar {
+		position: sticky;
+		top: 10px;
+		margin: 2%;
+		padding: 1%;
+		border-radius: 10px;
+		background-color: #fff !important;
+		box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 1px;
+	}
+	#inicio {
+		grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+		grid-template-columns: auto;
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . ." ". btn btn .";
+	}
+	#productos {
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . ." ". filter filter .";
+	}
+	#nosotras {
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
+	}
+	#contacto {
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
+	}
+	#faqs {
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3";
+	}
+	.navList {
+		overflow: auto;
+		justify-content: center;
+		gap: 1rem;
+	}
+	.threeImgSquare {
+		overflow: auto;
+		justify-content: start;
+		padding: 70px 20px;
+	}
+	.leftImage {
+		grid-template-areas: "img" "titleParagraph";
+	}
+	#imgGridIndex {
+		grid-template-areas: "img1" "img1" "img2" "img3" "img4" "img4" "img5" "img6";
+	}
+	#imgGridProduct {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.threeImgEllipse {
+		display: flex;
+		flex-wrap: wrap;
+		grid-template-areas: "cande" "vale" "meli";
+		figure {
+			max-width: 80%;
+		}
+	}
+	.mapEmbed {
+		padding: 70px 0;
+	}
+	.faqGrid {
+		section {
+			width: 80%;
+		}
+	}
+	.question {
+		max-width: 100%;
+	}
+	#referFAQs {
+		grid-template-areas: "img ." "titleParagraph btn";
+		img {
+			display: none;
+		}
+	}
+	footer {
+		gap: 2rem;
+		grid-template-areas: "footNav" "subs" "btn";
+	}
+	.footNavList {
+		flex-wrap: wrap;
+		flex-direction: row;
+		overflow: auto;
+		justify-content: start;
+	}
+	.subscription {
+		form {
+			div {
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: $phone) {
+	.header {
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+	}
+	#inicio {
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". btn btn .";
+	}
+	#productos {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" "filter filter filter filter";
+	}
+	#nosotras {
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
+	}
+	#contacto {
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
+	}
+	#faqs {
+		grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
+	}
+	.navList {
+		justify-content: start;
+		margin: 0 1.5rem;
+	}
+	.threeImgSquare {
+		justify-content: start;
+		padding: 70px 20px;
+		figure {
+			width: auto;
+			img {
+				width: 290px;
+			}
+		}
+	}
+	.titleParagraph {
+		width: 80%;
+		text-align: center;
+		gap: 1rem;
+	}
+	.leftImage {
+		img {
+			width: 80%;
+		}
+	}
+	#imgGridIndex {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img {
+			width: 80%;
+		}
+	}
+	.searchHeader {
+		justify-items: center;
+		grid-template-areas: "p" "srch";
+	}
+	#imgGridProduct {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.video {
+		width: 100%;
+		height: 200px;
+	}
+	.faqGrid {
+		section {
+			width: 90%;
+		}
+	}
+	#referFAQs {
+		grid-template-areas: "img" "titleParagraph" "btn";
+		h3 {
+			text-align: left;
+		}
+	}
+	.contactForm {
+		text-align: center;
+	}
+	.form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	#mensaje {
+		width: 282px;
+		max-width: 282px;
+		min-width: 282px;
+	}
+	.footNavList {
+		justify-content: center;
+	}
+}

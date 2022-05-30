@@ -1,0 +1,74 @@
+#imgGridIndex {
+	grid-template-areas: "img1 img2" "img1 img3" "img5 img4" "img6 img4";
+}
+#imgGridProduct {
+	gap: 2rem;
+	grid-template-areas: "img1 img2 img3 img4" "img5 img6 img7 img8" "img9 img10 img11 img12";
+	figure {
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+			box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px 0px;
+		}
+		figcaption {
+			margin: 1rem;
+			max-width: 240px;
+			display: flex;
+			flex-direction: column;
+			align-items: left;
+			p {
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+#inicio {
+	grid-template-areas: ". . . ." ". h2 h2 ." ". h3 h3 ." ". . . . "". btn btn .";
+}
+#productos {
+	grid-template-areas: ". . . . "". h2 h2 ." ". h3 h3 ." ". . . . "". filter filter .";
+}
+#nosotras {
+	grid-template-areas: ". . . ." ". h2 h2 ." ". h3 h3 ." ". . . .";
+}
+#contacto {
+	grid-template-areas: ". . . ." ". . . ." ". h2 h2 ." ". h3 h3 ." ". . . .";
+}
+#faqs {
+	grid-template-areas: ". . . ." ". . . ." ". h2 h2 ." ". h3 h3 ." ". . . .";
+}
+#paginatorFirst {
+	border-radius: 10px 0 0 10px;
+}
+#paginatorLast {
+	border-radius: 0 10px 10px 0;
+}
+#referFAQs {
+	background-color: #fff;
+	grid-template-areas: ". img" "titleParagraph img" "btn img" ". img";
+}
+#envios {
+	grid-area: envios;
+}
+#compras {
+	grid-area: compras;
+}
+#devoluciones {
+	grid-area: devoluciones;
+}
+#formName {
+	grid-area: formName;
+}
+#formEmail {
+	grid-area: formEmail;
+}
+#formSubject {
+	grid-area: formSubject;
+}
+#formPhone {
+	grid-area: formPhone;
+}
+#formMessage {
+	grid-area: formMessage;
+}

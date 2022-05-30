@@ -1,0 +1,28 @@
+.faqGrid {
+	background-color: #fff;
+	padding: 70px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3rem;
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		width: 50%;
+	}
+}
+.question {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	h4 {
+		padding: 1rem;
+		background-color: $light;
+		border-radius: 10px;
+	}
+	p {
+		text-align: left;
+	}
+}

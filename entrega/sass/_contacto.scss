@@ -1,0 +1,11 @@
+.contactForm {
+	background-color: $light;
+	padding: 70px 0;
+	display: grid;
+	grid-template-columns: auto;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	gap: 1rem;
+	grid-template-areas: "h3" "form";
+}

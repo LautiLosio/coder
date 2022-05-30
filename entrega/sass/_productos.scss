@@ -1,0 +1,50 @@
+$i:1;
+
+@for $i from 1 through 6 {
+    .img#{$i} {
+        grid-area: img#{$i};
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.searchHeader {
+	margin: 0 2rem;
+	grid-area: searchHeader;
+	display: grid;
+	gap: 1rem;
+	grid-template-areas: "p srch";
+	align-items: center;
+	justify-content: space-between;
+}
+.productGrid {
+	background-color: #fff;
+	padding: 70px 0;
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto;
+	gap: 1rem;
+	justify-content: center;
+	justify-items: stretch;
+	grid-template-areas: "searchHeader" "imgGrid" "paginator";
+}
+.paginator {
+	grid-area: paginator;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	button {
+		background-color: $light;
+		border: none;
+		color: $dark;
+		padding: 10px;
+		text-align: center;
+		font-size: .8rem;
+		font-weight: 600;
+		width: 36px;
+		height: 36px;
+		margin: 0 5px;
+		cursor: pointer;
+		border-radius: 0;
+	}
+}
