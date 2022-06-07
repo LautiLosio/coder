@@ -128,6 +128,15 @@ body {
 
 .navbar-collapse img {
   max-height: 40px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+          transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.navbar-collapse img:active {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .bg-light {
@@ -222,15 +231,6 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-          transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-h1:active {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
 }
 
 h2 {
@@ -306,7 +306,7 @@ button {
   border-radius: 10px;
 }
 
-.button {
+.button, .buttonSecondary {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: btn;
@@ -323,17 +323,17 @@ button {
   transition: all 0.2s ease-in-out;
 }
 
-.button:hover {
+.button:hover, .buttonSecondary:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+.button:active, .buttonSecondary:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
-.button button img {
+.button button img, .buttonSecondary button img {
   height: 1rem;
   margin: 0 0 0 10px;
 }
@@ -975,30 +975,40 @@ footer button {
     -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 1px;
             box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 5px 1px;
   }
+  inicio {
+        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . ." ". btn btn .";
+  }
+  productos {
+        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . ." ". filter filter .";
+  }
+  nosotras {
+        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
+  }
+  contacto {
+        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
+  }
+  faqs {
+        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3";
+  }
   #inicio {
     -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . ." ". btn btn .";
   }
   #productos {
-        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . ." ". filter filter .";
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
   #nosotras {
     -ms-grid-rows: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
   }
   #contacto {
     -ms-grid-rows: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3" ". . . .";
   }
   #faqs {
     -ms-grid-rows: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: ". . . ." "h2 h2 h2 h2" "h3 h3 h3 h3";
   }
   .navList {
     overflow: auto;
