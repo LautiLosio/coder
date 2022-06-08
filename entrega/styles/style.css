@@ -890,6 +890,7 @@ footer button {
 
 .threeImgEllipse figure figcaption {
   padding: 15px 0;
+  margin-top: 15px;
 }
 
 .threeImgEllipse figure figcaption p {
@@ -898,6 +899,10 @@ footer button {
 
 .threeImgEllipse figure img {
   border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  -webkit-box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 6px 1px rgba(0, 0, 0, 0.2);
 }
 
 #userCande {
