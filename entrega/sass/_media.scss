@@ -46,19 +46,25 @@ $phone:700px;
     }
 
     .navList {
-        overflow: auto;
+        // overflow: auto;
         justify-content: center;
         gap: 1rem;
     }
 
     .threeImgSquare {
-        overflow: auto;
-        justify-content: start;
+        // overflow: auto;
         padding: 70px 20px;
-    }
+        flex-wrap: wrap;
+        }
 
     .leftImage {
         grid-template-areas: "img""titleParagraph";
+    }
+
+    .mediaShow {
+        .carousel-container {
+            width: 80%;
+        }
     }
 
     #imgGridIndex {
@@ -109,8 +115,8 @@ $phone:700px;
 
     .footNavList {
         flex-wrap: wrap;
-        flex-direction: row;
-        overflow: auto;
+        flex-direction: column;
+        // overflow: auto;
         justify-content: start;
     }
 
@@ -157,9 +163,11 @@ $phone:700px;
     }
 
     .threeImgSquare {
-        justify-content: start;
         padding: 70px 20px;
-
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        
         figure {
             width: auto;
 
@@ -178,6 +186,13 @@ $phone:700px;
     .leftImage {
         img {
             width: 80%;
+        }
+    }
+
+    .mediaShow {
+        .carousel-container {
+            margin: 0 10px;
+            width: 100%;
         }
     }
 

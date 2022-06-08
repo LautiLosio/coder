@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Universify</title>
@@ -79,25 +80,69 @@
         <section class="leftImage">
             <div class="titleParagraph">
                 <h3>¿Que es Universify?</h3>
-                <p>Es una pagina web desarrollada por <a href="https://github.com/LautiLosio" target="_blank" rel="noopener noreferrer">Lauti Losio</a> como primer proyecto para la carrera <i>"Desarrollo Frontend"</i>.<br>Basada en el proyecto de un <a href="./pages/nosotras.html">grupo de alumnas</a> para la materia Evaluacion de Proyectos de Inversion, dictada en la FCE, Lic en Economía, dirigido por los profes Juan José Pompilio Sartori y Walter Romano.</p>
+                <p>Es una pagina web desarrollada por <a href="https://github.com/LautiLosio" target="_blank" rel="noopener noreferrer">Lauti Losio</a> como primer proyecto para la carrera <i>"Desarrollo Frontend"</i>.<br>Basada en el proyecto de un <a href="./pages/nosotras.html">grupo de alumnas</a>                    para la materia Evaluacion de Proyectos de Inversion, dictada en la FCE, Lic en Economía, dirigido por los profes Juan José Pompilio Sartori y Walter Romano.</p>
             </div>
             <img src="./img/undraw_project_complete_lwss.svg" alt="imagenDeRelleno500x500">
         </section>
 
         <section class="mediaShow" id="popular">
-            <div class="titleParagraph">
+            <div class="d-flex flex-column align-items-center">
                 <h2>Productos Populares</h3>
                     <p>Echale un ojo a nuestros productos mas vistos</p>
             </div>
-            <div class="imgGrid" id="imgGridIndex">
-                <img class="img1" src="./img/500X500.png" alt="imagenDeRelleno500x500">
-                <img class="img2" src="./img/500X250.png" alt="imagenDeRelleno500X250">
-                <img class="img3" src="./img/500X250.png" alt="imagenDeRelleno500X250">
-                <img class="img4" src="./img/500X500.png" alt="imagenDeRelleno500X250">
-                <img class="img5" src="./img/500X250.png" alt="imagenDeRelleno500X250">
-                <img class="img6" src="./img/500X250.png" alt="imagenDeRelleno500X250">
+            <div class="carousel-container">
+                <div class="carousel" data-flickity='{ "wrapAround": true }'>
+                    <div class="carousel-cell">
+                        <figure class="img1">
+                            <img src="https://m.media-amazon.com/images/I/51EkixGEbaL.jpg" alt="Tablero para Arquitectura 70x50x130cm con cajonera">
+                            <figcaption>
+                                <p>Tablero para Arquitectura 70x50x130cm con cajonera</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="carousel-cell">
+                        <figure class="img2">
+                            <img src="https://tecnoedu.com/Medicina/img/VE281.jpg" alt="Craneo para practicas de Odontologia">
+                            <figcaption>
+                                <p>Craneo para practicas de Odontologia</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="carousel-cell">
+                        <figure class="img3">
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_685719-MLA40758039329_022020-V.jpg" alt="Set de escuadras plantec">
+                            <figcaption>
+                                <p>Set de escuadras Plantec</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="carousel-cell">
+                        <figure class="img4">
+                            <img src="https://http2.mlstatic.com/D_NQ_NP_730037-MLA31063356930_062019-O.jpg" alt="Ambo color Navy talle M">
+                            <figcaption>
+                                <p>Ambo color Navy talle M unisex con bolisillos</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="carousel-cell">
+                        <figure class="img5">
+                            <img src="https://m.media-amazon.com/images/I/51C58E3RMAL._AC_SX355_.jpg" alt="Calculadora financiera marca CASIO">
+                            <figcaption>
+                                <p>Calculadora financiera marca HP 19BII</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
         </section>
+        <!-- <div class="gallery js-flickity" id="imgGridIndex" data-flickity-options='{ "wrapAround": true }'>
+            <img class="gallery-cell img1" src="./img/500X500.png" alt="imagenDeRelleno500x500">
+            <img class="gallery-cell img2" src="./img/500X250.png" alt="imagenDeRelleno500X250">
+            <img class="gallery-cell img3" src="./img/500X250.png" alt="imagenDeRelleno500X250">
+            <img class="gallery-cell img4" src="./img/500X500.png" alt="imagenDeRelleno500X250">
+            <img class="gallery-cell img5" src="./img/500X250.png" alt="imagenDeRelleno500X250">
+            <img class="gallery-cell img6" src="./img/500X250.png" alt="imagenDeRelleno500X250">
+        </div> -->
     </main>
 
     <footer>
@@ -129,6 +174,7 @@
         <a href="#inicio" class="button"><button>Volver&nbsp;hacia&nbsp;arriba<img class="filterDark" src="./media/arrow-up-solid.svg" alt="arrow-up-solid"></button></a>
     </footer>
 
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>

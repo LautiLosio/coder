@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#imgGridIndex {
-      grid-template-areas: "img1 img2" "img1 img3" "img5 img4" "img6 img4";
-}
-
 #imgGridProduct {
   gap: 2rem;
       grid-template-areas: "img1 img2 img3 img4" "img5 img6 img7 img8" "img9 img10 img11 img12";
@@ -425,9 +421,9 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .threeImgSquare figure {
@@ -458,6 +454,10 @@ select {
 .threeImgSquare figure figcaption {
   padding: 15px 0;
   max-width: 375px;
+  text-align: center;
+}
+
+.threeImgSquare figure figcaption p {
   text-align: center;
 }
 
@@ -517,15 +517,34 @@ img {
   background-color: #fff;
   padding: 70px 0;
   text-align: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  justify-items: center;
-      grid-template-areas: "titleParagraph" "imgGrid";
+}
+
+.mediaShow .carousel-container {
+  margin: auto;
+  width: 60%;
+}
+
+.mediaShow .carousel-container .carousel {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mediaShow .carousel-container .carousel .carousel-cell {
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px 0px;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px 0px;
+  margin: 1rem;
+}
+
+.mediaShow .carousel-container .carousel .carousel-cell img {
+  margin: 10px;
+  max-width: 300px;
+  max-height: 100%;
+  padding: 1rem;
 }
 
 .imgGrid {
@@ -1011,21 +1030,21 @@ footer button {
         grid-template-rows: 1fr 1fr 1fr;
   }
   .navList {
-    overflow: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     gap: 1rem;
   }
   .threeImgSquare {
-    overflow: auto;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
     padding: 70px 20px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .leftImage {
         grid-template-areas: "img" "titleParagraph";
+  }
+  .mediaShow .carousel-container {
+    width: 80%;
   }
   #imgGridIndex {
         grid-template-areas: "img1" "img1" "img2" "img3" "img4" "img4" "img5" "img6";
@@ -1070,11 +1089,10 @@ footer button {
   .footNavList {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    overflow: auto;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
@@ -1117,10 +1135,15 @@ footer button {
     margin: 0 1.5rem;
   }
   .threeImgSquare {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
     padding: 70px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
   }
   .threeImgSquare figure {
     width: auto;
@@ -1135,6 +1158,10 @@ footer button {
   }
   .leftImage img {
     width: 80%;
+  }
+  .mediaShow .carousel-container {
+    margin: 0 10px;
+    width: 100%;
   }
   #imgGridIndex {
     display: -webkit-box;
