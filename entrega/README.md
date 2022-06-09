@@ -1,10 +1,11 @@
-# Desafio SASS II + SEO
+# Tercer Entrega del Proyecto Final
 
-## >> Consigna:
-Aplicar un mapa, un mixin y un extend para modificar cualquier elemento de nuestro sitio. Realizar las modificaciones necesarias para mejorar el SEO en nuestro sitio.
+## >>Objetivos generales:
+Estructura prolija y limpia: Realizar una estructura del HTML con buena indentación, espacios prolijos, y comentarios siendo usados para comentar secciones y no para ocultar código.
 
-## >>Aspectos a incluir en el entregable:
-- Declarar un mapa y utilizar un map-get. Extender una clase base y modificarla. Generar un mixin para reutilizar código.
-- Suma keywords, descripción, títulos y encabezado a todas las páginas de tu sitio. Explica en un Google Doc los cambios realizados en el punto anterior, por ejemplo: _"Agregué estas keywords", "Cambié estos titulos", etc._
+## >>Objetivos específicos: 
+Maqueta de la web en base al framework elegido: Agregar elementos HTML según necesidades de armar contenedores o elementos web determinados, a través del código del framework elegido y la documentación del mismo.
 
-### Chequear los commits para ver los cambios realizados!!!
+## >>Se debe entregar: 
+- Maquetado de la web: las estructuras maquetan a la web en base al framework elegido, haciendo usos de clases utilitarias para armar grillas, elementos web y estilos propios del framework, además del HTML de contenido. En caso de no elegir framework, los elementos respetan una cierta maqueta propia.
+- Páginas: todas las páginas tienen el contenido estructurado y el estilo linkeado. También tiene que tener agregadas las diferentes librerías de Javascript y CSS pertinentes al framework.
